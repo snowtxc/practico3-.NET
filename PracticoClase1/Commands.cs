@@ -51,6 +51,8 @@ namespace PracticoClase1
             string documento = Console.ReadLine();
 
             _personasBL.Delete(documento);
+
+            Console.WriteLine("Persona eliminada correctamente.");
         }
     }
 }

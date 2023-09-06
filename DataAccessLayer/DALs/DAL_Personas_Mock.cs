@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer.DALs
 {
-    public class DAL_Personas : IDAL_Personas
+    public class DAL_Personas_Mock : IDAL_Personas
     {
         private Dictionary<string, Persona> personas = new Dictionary<string, Persona>();
 
