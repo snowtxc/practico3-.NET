@@ -19,6 +19,8 @@ namespace DataAccessLayer.DALs
             _dbContext = dbContext;
         }
 
+        
+
         public void Delete(string documento)
         {
             Personas? personaFind = _dbContext.Personas.FirstOrDefault(p => p.Documento == documento);
