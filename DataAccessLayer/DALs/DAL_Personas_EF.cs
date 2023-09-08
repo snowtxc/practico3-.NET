@@ -14,6 +14,7 @@ namespace DataAccessLayer.DALs
     {
         private DBContextCore _dbContext;
 
+
         public DAL_Personas_EF(DBContextCore dbContext)
         {
             _dbContext = dbContext;
