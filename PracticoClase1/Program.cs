@@ -5,12 +5,15 @@ using DataAccessLayer.IDALs;
 using BusinessLayer.IBLs;
 using BusinessLayer.BLs;
 using PracticoClase1;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 
 Console.WriteLine("Primera Aplicación con .NET");
 
-IDAL_Personas _personas = new DAL_Personas();
+IDAL_Personas _personas = new DAL_Personas_EF(new DataAccessLayer.DBContextCore());
 IBL_Personas _personasBL = new BL_Personas(_personas);
 Commands commands = new Commands(_personasBL);
+UpdateDatabase();
 
 Console.WriteLine("Comandos Posibles:");
 Console.WriteLine("1 - Agregar Persona");
@@ -20,6 +23,7 @@ Console.WriteLine("4 - Salir");
 
 Console.Write("Ingrese Comando> ");
 string command = Console.ReadLine();
+
 
 while(command != "4")
 {
@@ -53,3 +57,11 @@ while(command != "4")
 }
 
 Console.WriteLine("Gracias por usar la aplicación");
+
+void UpdateDatabase()
+{
+    using (var context = new DataAccessLayer.DBContextCore())
+    {
+        context?.Database.Migrate();
+    }
+}
