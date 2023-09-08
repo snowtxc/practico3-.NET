@@ -14,6 +14,8 @@ namespace DataAccessLayer.EFModels
         [Key]
         public long Id { get; set; }
 
+
+
         [MaxLength(128), MinLength(3), Required]
         public string Documento { get; set; } = "";
 
@@ -24,5 +26,9 @@ namespace DataAccessLayer.EFModels
         public string Apellidos { get; set; } = "";
 
         public int Telefono { get; set; }
+
+        public DateTime FechaDeNacimiento { get; set; }
+
+        public String Direccion { get; set; }
     }
 }

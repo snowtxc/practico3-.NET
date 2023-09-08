@@ -5,6 +5,10 @@
         public string Nombre { get; set; } = "-- Sin Nombre --";
 
         private string documento = "";
+
+        public DateTime FechaDeNacimiento;
+
+        public string Direccion = "";
         public string Documento
         {
             get

@@ -14,7 +14,7 @@ namespace DataAccessLayer
 {
     public class DBContextCore : DbContext
     {
-        private string _connectionString = "Server=localhost,1433;Database=Practico3;User Id=sa;Password=Abc*123!;Encrypt=False;";
+        private string _connectionString = "Server=DESKTOP-PQS42G3\\SQLEXPRESS;DATABASE=Practico3;Trusted_Connection=True;TrustServerCertificate=True";
 
         public DBContextCore()
         { }
