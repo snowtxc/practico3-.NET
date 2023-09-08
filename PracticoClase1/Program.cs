@@ -24,6 +24,7 @@ Console.WriteLine("4 - Salir");
 Console.Write("Ingrese Comando> ");
 string command = Console.ReadLine();
 
+
 while(command != "4")
 {
     try
